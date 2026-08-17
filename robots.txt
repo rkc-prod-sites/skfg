@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /blog-template.html
+
+Sitemap: https://skfg.co.nz/sitemap.xml
