@@ -230,6 +230,19 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
   .faq-item.open .faq-q svg{transform:rotate(45deg)}
   .faq-a{display:none;padding:0 1.5rem 1.25rem;font-size:.875rem;color:var(--text-mid);line-height:1.7;font-weight:300;border-top:1px solid rgba(26,39,68,.05);padding-top:1rem}
   .faq-item.open .faq-a{display:block}
+
+  /* Mobile responsive fix for previously-unclassed inline grids */
+  @media(max-width:900px){
+    .grid-2col,.grid-2col-b,.grid-article{grid-template-columns:1fr!important}
+    .grid-4col{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(max-width:760px){
+    .grid-3col{grid-template-columns:1fr!important}
+  }
+  @media(max-width:550px){
+    .grid-4col{grid-template-columns:1fr!important}
+  }
+
 </style>
 
   <!-- ═══════════════════════════════════════════════════
@@ -298,7 +311,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>30+ lenders &amp; insurers</div>
     <div class="trust-divider"></div>
-    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2025</div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2023</div>
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>NZA Top 25 Broker</div>
   </div>
@@ -313,7 +326,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
         <h2 class="section-title">Comprehensive <em>cover</em> options</h2>
       </div>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
+    <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem">
       
     <a href="#health" style="background:var(--white);border-radius:8px;border:1px solid rgba(26,39,68,.07);padding:1.75rem;display:block;text-decoration:none;color:inherit;transition:box-shadow .25s,transform .25s;box-shadow:var(--shadow)" onmouseenter="this.style.transform='translateY(-4px)';this.style.boxShadow='var(--shadow-lg)'" onmouseleave="this.style.transform='';this.style.boxShadow='var(--shadow)'">
       <div style="width:40px;height:40px;background:var(--gold-dim);border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
@@ -356,7 +369,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
       <div class="section-label" style="color:var(--gold-light);justify-content:center"><span></span>Why it matters</div>
       <h2 class="section-title" style="color:var(--white);max-width:540px;margin:0 auto">Are you and your family <em>protected?</em></h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
+    <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
       <div style="background:var(--navy-mid);border-radius:8px;padding:2rem;text-align:center"><div style="font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--gold);margin-bottom:.5rem">1 in 3</div><div style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6">New Zealanders will be diagnosed with cancer in their lifetime</div></div><div style="background:var(--navy-mid);border-radius:8px;padding:2rem;text-align:center"><div style="font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--gold);margin-bottom:.5rem">$0</div><div style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6">Cost to you for expert insurance advice — we're paid by insurers</div></div><div style="background:var(--navy-mid);border-radius:8px;padding:2rem;text-align:center"><div style="font-family:var(--serif);font-size:2.5rem;font-weight:600;color:var(--gold);margin-bottom:.5rem">30+</div><div style="font-size:.82rem;color:rgba(255,255,255,.55);line-height:1.6">Insurance products from leading NZ providers we can access for you</div></div>
     </div>
   </div>
@@ -365,7 +378,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 
 <section id="health" style="padding:4.5rem 0;background:var(--white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Health Insurance</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Health Insurance</h2>
@@ -406,7 +419,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 </section>
 <section id="life" style="padding:4.5rem 0;background:var(--off-white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Life Insurance</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Life Insurance</h2>
@@ -447,7 +460,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 </section>
 <section id="trauma" style="padding:4.5rem 0;background:var(--white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Trauma Insurance</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Trauma Insurance</h2>
@@ -488,7 +501,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 </section>
 <section id="tpd" style="padding:4.5rem 0;background:var(--off-white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Total & Permanent Disability</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Total & Permanent Disability</h2>
@@ -529,7 +542,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 </section>
 <section id="income-protection" style="padding:4.5rem 0;background:var(--white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Income Protection</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Income Protection</h2>
@@ -570,7 +583,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 </section>
 <section id="mortgage-protection" style="padding:4.5rem 0;background:var(--off-white)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start">
       <div>
         <div style="display:inline-flex;align-items:center;gap:.7rem;background:var(--gold-dim);border-radius:8px;padding:.75rem 1rem;margin-bottom:1.5rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg><span style="font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Mortgage Protection</span></div>
         <h2 style="font-family:var(--serif);font-size:clamp(1.7rem,2.8vw,2.3rem);font-weight:300;color:var(--navy);margin-bottom:1rem;line-height:1.2">Mortgage Protection</h2>
@@ -695,7 +708,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="popup-header">
       <button class="popup-close" onclick="closePopup()">✕</button>
       <h3>Book your free consultation</h3>
-      <p>No obligation · Expert advice · Serving NZ families since 2025</p>
+      <p>No obligation · Expert advice · Serving NZ families since 2023</p>
     </div>
     <div class="popup-accent"></div>
     <div class="popup-body">

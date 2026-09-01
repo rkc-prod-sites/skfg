@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About SK Financial Group | Auckland Mortgage Advisers</title>
-<meta name="description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2025.">
+<meta name="description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2023.">
 <meta name="keywords" content="SK Financial Group about, mortgage adviser Auckland, FMA registered adviser, NZA top 25 broker">
 <meta name="robots" content="index, follow">
 <meta name="author" content="SK Financial Group">
@@ -12,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="About SK Financial Group | Auckland Mortgage & Insurance Advisers">
-<meta property="og:description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2025.">
+<meta property="og:description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2023.">
 <meta property="og:url" content="https://skfg.co.nz/about.html">
 <meta property="og:site_name" content="SK Financial Group">
 <meta property="og:image" content="https://skfg.co.nz/og-image.jpg">
@@ -20,10 +20,10 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About SK Financial Group | Auckland Mortgage & Insurance Advisers">
 <meta name="twitter:image" content="https://skfg.co.nz/og-image.jpg">
-<meta name="twitter:description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2025.">
+<meta name="twitter:description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2023.">
 <!-- Schema.org -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"AboutPage","name":"About SK Financial Group","url":"https://skfg.co.nz/about.html"}</script>
-<meta name="description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2025.">
+<meta name="description" content="SK Financial Group — Auckland mortgage brokers and insurance advisers. FMA registered, NZA Top 25 Broker, serving NZ families since 2023.">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
@@ -230,6 +230,29 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
   .faq-item.open .faq-q svg{transform:rotate(45deg)}
   .faq-a{display:none;padding:0 1.5rem 1.25rem;font-size:.875rem;color:var(--text-mid);line-height:1.7;font-weight:300;border-top:1px solid rgba(26,39,68,.05);padding-top:1rem}
   .faq-item.open .faq-a{display:block}
+
+  /* Mobile responsive fix for previously-unclassed inline grids */
+  @media(max-width:900px){
+    .grid-2col,.grid-2col-b,.grid-article{grid-template-columns:1fr!important}
+    .grid-4col{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(max-width:760px){
+    .grid-3col{grid-template-columns:1fr!important}
+  }
+  @media(max-width:550px){
+    .grid-4col{grid-template-columns:1fr!important}
+  }
+
+
+  @media(max-width:900px){
+    .about-badge{
+      bottom:12px!important;right:12px!important;
+      padding:.7rem .9rem!important;
+    }
+    .about-badge span:first-child,.about-badge-num{font-size:1.15rem!important}
+    .about-badge span:last-child,.about-badge-text{font-size:.6rem!important}
+  }
+
 </style>
 
   <!-- ═══════════════════════════════════════════════════
@@ -292,7 +315,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>30+ lenders &amp; insurers</div>
     <div class="trust-divider"></div>
-    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2025</div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2023</div>
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>NZA Top 25 Broker</div>
   </div>
@@ -302,12 +325,11 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 <!-- STORY -->
 <section>
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
-      <style>@media(max-width:900px){.about-story{grid-template-columns:1fr!important}}</style>
+    <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center">
       <div style="position:relative">
         <div style="position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:2px solid rgba(201,168,76,.28);border-radius:8px;z-index:0"></div>
         <img src="broker-photo.jpg" alt="SK Financial Group Adviser" style="width:100%;border-radius:8px;position:relative;z-index:1;box-shadow:var(--shadow-lg)">
-        <div style="position:absolute;bottom:-20px;right:-20px;z-index:2;background:var(--gold);color:var(--navy);padding:1.25rem 1.5rem;border-radius:8px;text-align:center;box-shadow:var(--shadow)">
+        <div class="about-badge" style="position:absolute;bottom:-20px;right:-20px;z-index:2;background:var(--gold);color:var(--navy);padding:1.25rem 1.5rem;border-radius:8px;text-align:center;box-shadow:var(--shadow)">
           <span style="font-family:var(--serif);font-size:1.8rem;font-weight:600;display:block;line-height:1">NZA</span>
           <span style="font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:.2rem">Top 25 Broker</span>
         </div>
@@ -334,8 +356,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
       <div class="section-label" style="justify-content:center"><span></span>Our values</div>
       <h2 class="section-title" style="max-width:500px;margin:0 auto">The principles that <em>guide</em> everything we do</h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
-      <style>@media(max-width:760px){.values-grid{grid-template-columns:1fr!important}}</style>
+    <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
       <div class="card"><div class="card-body" style="text-align:center">
         <div style="width:52px;height:52px;background:var(--gold-dim);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
         <h3 style="font-family:var(--serif);font-size:1.2rem;font-weight:400;color:var(--navy);margin-bottom:.6rem">Client First</h3>
@@ -368,8 +389,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 <!-- STATS -->
 <section style="background:var(--navy)">
   <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center">
-      <style>@media(max-width:760px){.stats-row{grid-template-columns:repeat(2,1fr)!important}}</style>
+    <div class="grid-4col" style="display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center">
       <div><div style="font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--gold);line-height:1">500+</div><div style="font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.4rem">Clients helped</div></div><div><div style="font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--gold);line-height:1">30+</div><div style="font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.4rem">Lender &amp; insurer partners</div></div><div><div style="font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--gold);line-height:1">5 ★</div><div style="font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.4rem">Google rating</div></div><div><div style="font-family:var(--serif);font-size:3rem;font-weight:300;color:var(--gold);line-height:1">Top 25</div><div style="font-size:.78rem;color:rgba(255,255,255,.5);letter-spacing:.06em;text-transform:uppercase;margin-top:.4rem">NZA Ranked Broker</div></div>
     </div>
   </div>
@@ -382,8 +402,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
       <div class="section-label" style="justify-content:center"><span></span>Credentials</div>
       <h2 class="section-title" style="max-width:500px;margin:0 auto">Accredited, regulated &amp; <em>accountable</em></h2>
     </div>
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
-      <style>@media(max-width:760px){.creds-grid{grid-template-columns:1fr!important}}</style>
+    <div class="grid-3col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem">
       <div style="background:var(--off-white);border-radius:8px;padding:2rem;border:1px solid rgba(26,39,68,.07)">
         <h4 style="font-family:var(--serif);font-size:1.1rem;font-weight:400;color:var(--navy);margin-bottom:.5rem">FMA Registered Adviser</h4>
         <p style="font-size:.84rem;color:var(--text-mid);line-height:1.7;font-weight:300">Registered with the Financial Markets Authority (FMA) under the Financial Advisers Act. This means we're held to strict professional and ethical standards.</p>
@@ -483,7 +502,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="popup-header">
       <button class="popup-close" onclick="closePopup()">✕</button>
       <h3>Book your free consultation</h3>
-      <p>No obligation · Expert advice · Serving NZ families since 2025</p>
+      <p>No obligation · Expert advice · Serving NZ families since 2023</p>
     </div>
     <div class="popup-accent"></div>
     <div class="popup-body">

@@ -230,6 +230,19 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
   .faq-item.open .faq-q svg{transform:rotate(45deg)}
   .faq-a{display:none;padding:0 1.5rem 1.25rem;font-size:.875rem;color:var(--text-mid);line-height:1.7;font-weight:300;border-top:1px solid rgba(26,39,68,.05);padding-top:1rem}
   .faq-item.open .faq-a{display:block}
+
+  /* Mobile responsive fix for previously-unclassed inline grids */
+  @media(max-width:900px){
+    .grid-2col,.grid-2col-b,.grid-article{grid-template-columns:1fr!important}
+    .grid-4col{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(max-width:760px){
+    .grid-3col{grid-template-columns:1fr!important}
+  }
+  @media(max-width:550px){
+    .grid-4col{grid-template-columns:1fr!important}
+  }
+
 </style>
 
   <!-- ═══════════════════════════════════════════════════
@@ -292,7 +305,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>30+ lenders &amp; insurers</div>
     <div class="trust-divider"></div>
-    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2025</div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2023</div>
     <div class="trust-divider"></div>
     <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>NZA Top 25 Broker</div>
   </div>
@@ -301,8 +314,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 
 <section>
   <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start">
-      <style>@media(max-width:900px){.contact-grid{grid-template-columns:1fr!important}}</style>
+    <div class="grid-2col-b" style="display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:start">
 
       <!-- Contact Info -->
       <div>
@@ -462,7 +474,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
     <div class="popup-header">
       <button class="popup-close" onclick="closePopup()">✕</button>
       <h3>Book your free consultation</h3>
-      <p>No obligation · Expert advice · Serving NZ families since 2025</p>
+      <p>No obligation · Expert advice · Serving NZ families since 2023</p>
     </div>
     <div class="popup-accent"></div>
     <div class="popup-body">

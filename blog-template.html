@@ -192,6 +192,19 @@
     .sidebar-links{display:none}
   }
   @media(max-width:600px){.footer-grid{grid-template-columns:1fr}}
+
+  /* Mobile responsive fix for previously-unclassed inline grids */
+  @media(max-width:900px){
+    .grid-2col,.grid-2col-b,.grid-article{grid-template-columns:1fr!important}
+    .grid-4col{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(max-width:760px){
+    .grid-3col{grid-template-columns:1fr!important}
+  }
+  @media(max-width:550px){
+    .grid-4col{grid-template-columns:1fr!important}
+  }
+
 </style>
 
   <!-- Google Search Console verification — paste your tag here once you verify ownership
