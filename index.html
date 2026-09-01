@@ -172,7 +172,11 @@
   /* Services */
   .services{background:var(--white)}
   .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:rgba(26,39,68,.06);border-radius:8px;overflow:hidden;box-shadow:var(--shadow)}
-  .service-card{background:var(--white);padding:2.25rem;position:relative;transition:background .25s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+  .service-card{background:var(--white);position:relative;transition:background .25s;cursor:pointer;text-decoration:none;color:inherit;display:block}
+  .service-card-body{padding:2.25rem}
+  .service-card-banner{height:130px;overflow:hidden;position:relative}
+  .service-card-banner img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+  .service-card:hover .service-card-banner img{transform:scale(1.06)}
   .service-card::after{content:'';position:absolute;bottom:0;left:0;right:100%;height:2px;background:var(--gold);transition:right .3s ease}
   .service-card:hover{background:#fafaf6}
   .service-card:hover::after{right:0}
@@ -330,6 +334,29 @@
     .nav-links{display:none}
     .hamburger{display:flex}
   }
+
+  /* Mobile responsive fix for previously-unclassed inline grids */
+  @media(max-width:900px){
+    .grid-2col,.grid-2col-b,.grid-article{grid-template-columns:1fr!important}
+    .grid-4col{grid-template-columns:repeat(2,1fr)!important}
+  }
+  @media(max-width:760px){
+    .grid-3col{grid-template-columns:1fr!important}
+  }
+  @media(max-width:550px){
+    .grid-4col{grid-template-columns:1fr!important}
+  }
+
+
+  @media(max-width:900px){
+    .about-badge{
+      bottom:12px!important;right:12px!important;
+      padding:.7rem .9rem!important;
+    }
+    .about-badge span:first-child,.about-badge-num{font-size:1.15rem!important}
+    .about-badge span:last-child,.about-badge-text{font-size:.6rem!important}
+  }
+
 </style>
 
   <!-- ═══════════════════════════════════════════════════
@@ -449,7 +476,7 @@
 
   <div class="hero-card">
     <h3>Get a free consultation</h3>
-    <p>No obligation · Serving NZ families since 2025 · Expert advice</p>
+    <p>No obligation · Serving NZ families since 2023 · Expert advice</p>
     <form action="https://formspree.io/f/myeggglo" method="POST">
       <input type="hidden" name="_subject" value="New enquiry — SKFG website (Homepage hero)">
       <input type="hidden" name="form_source" value="Homepage hero form">
@@ -478,7 +505,7 @@
   <div class="trust-divider"></div>
   <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>30+ lenders &amp; insurers</div>
   <div class="trust-divider"></div>
-  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2025</div>
+  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2023</div>
   <div class="trust-divider"></div>
   <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>NZA Top 25 Broker</div>
 </div>
@@ -494,6 +521,8 @@
   </div>
   <div class="services-grid">
     <a href="mortgage.html" class="service-card">
+      <div class="service-card-banner"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="New Zealand mortgage and home lending"></div>
+      <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
       <h3>Home Mortgages</h3>
       <p>First home buyers, refinancing, renovation loans, bridging finance, low deposit options, and loan-to-build solutions tailored to your situation.</p>
@@ -501,8 +530,11 @@
         <span class="service-tag">First Home</span><span class="service-tag">Refinance</span><span class="service-tag">Low Deposit</span><span class="service-tag">Renovation</span><span class="service-tag">+4 more</span>
       </div>
       <div class="service-link" style="margin-top:1.25rem">View all mortgage options <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
     </a>
     <a href="insurance.html" class="service-card">
+      <div class="service-card-banner"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=700&q=80" alt="Insurance and family protection cover"></div>
+      <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3>Insurance Cover</h3>
       <p>Protect what matters most with life, health, trauma, income protection, mortgage protection, and TPD insurance from leading NZ providers.</p>
@@ -510,8 +542,11 @@
         <span class="service-tag">Life</span><span class="service-tag">Health</span><span class="service-tag">Trauma</span><span class="service-tag">Income Protection</span><span class="service-tag">+2 more</span>
       </div>
       <div class="service-link" style="margin-top:1.25rem">View all insurance options <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
     </a>
     <a href="mortgage.html#business-lending" class="service-card">
+      <div class="service-card-banner"><img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=700&q=80" alt="Business and commercial lending"></div>
+      <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h3>Business &amp; Commercial</h3>
       <p>Business lending, commercial property finance, and property development funding. We understand the needs of NZ business owners.</p>
@@ -519,33 +554,8 @@
         <span class="service-tag">Business Lending</span><span class="service-tag">Commercial</span><span class="service-tag">Development</span>
       </div>
       <div class="service-link" style="margin-top:1.25rem">Explore business lending <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
+      </div>
     </a>
-  </div>
-</section>
-
-<!-- IMAGE FEATURE: First Home & Refinance -->
-<section class="img-section reveal" style="padding:0 5% 5rem">
-  <div class="img-grid">
-    <div class="img-pane">
-      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=800&q=80" alt="New Zealand home">
-      <div class="img-overlay">
-        <div class="img-overlay-content">
-          <h3>First Home Buyer</h3>
-          <p>We'll guide you from pre-approval to keys in hand — including access to First Home Grant and KiwiSaver withdrawal.</p>
-          <a href="mortgage.html#first-home-buyer" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:.75rem;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
-    <div class="img-pane">
-      <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80" alt="Property investment">
-      <div class="img-overlay">
-        <div class="img-overlay-content">
-          <h3>Investment Property</h3>
-          <p>Build your portfolio strategically. We help investors structure lending to maximise returns and grow wealth long-term.</p>
-          <a href="mortgage.html#investment-property" style="display:inline-flex;align-items:center;gap:.4rem;margin-top:.75rem;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold)">Learn more <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -574,7 +584,7 @@
     </div>
     <div class="why-item">
       <div class="why-num">04</div>
-      <div><h4>Serving NZ families since 2025</h4><p>Our advice is completely free. We're compensated by lenders and insurers when we place business — so you get expert guidance with zero out-of-pocket cost.</p></div>
+      <div><h4>Serving NZ families since 2023</h4><p>Our advice is completely free. We're compensated by lenders and insurers when we place business — so you get expert guidance with zero out-of-pocket cost.</p></div>
     </div>
   </div>
 </section>
@@ -607,7 +617,7 @@
 
 <!-- IMAGE FEATURE: Insurance -->
 <section class="reveal" style="padding:0 5% 5rem;background:var(--off-white)">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--navy);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg)">
+  <div class="grid-2col" style="display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;background:var(--navy);border-radius:12px;overflow:hidden;box-shadow:var(--shadow-lg)">
     <div style="position:relative;height:420px;overflow:hidden">
       <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Insurance protection" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.7">
       <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--navy))"></div>
@@ -773,7 +783,7 @@
     <div class="popup-header">
       <button class="popup-close" onclick="closePopup()">✕</button>
       <h3>Book your free consultation</h3>
-      <p>No obligation · Expert advice · Serving NZ families since 2025</p>
+      <p>No obligation · Expert advice · Serving NZ families since 2023</p>
     </div>
     <div class="popup-accent"></div>
     <div class="popup-body">
