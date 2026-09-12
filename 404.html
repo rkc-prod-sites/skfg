@@ -41,17 +41,18 @@ html{scroll-behavior:smooth}
 body{font-family:var(--sans);color:var(--text-dark);background:var(--white);overflow-x:hidden;line-height:1.6}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.container{max-width:var(--max);margin:0 auto;padding:0}
+.container{max-width:var(--max);margin:0 auto;padding:0 5%}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.18);height:128px;display:flex;align-items:center;transition:box-shadow .3s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy-deep);border-bottom:1px solid rgba(201,168,76,0.25);height:128px;display:flex;align-items:center;transition:box-shadow .3s}
 nav.scrolled{box-shadow:var(--shadow)}
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;width:100%}
-.nav-logo img{height:96px;width:auto}
+.nav-logo{display:flex;align-items:center}
+  .nav-logo img{height:96px;width:auto;display:block}
 .nav-links{display:flex;gap:1.75rem;list-style:none;align-items:center}
-.nav-links>li>a{font-size:.855rem;font-weight:500;letter-spacing:.025em;color:var(--text-mid);position:relative;padding-bottom:2px;transition:color .2s}
+.nav-links>li>a{font-size:.855rem;font-weight:500;letter-spacing:.025em;color:rgba(255,255,255,.8);position:relative;padding-bottom:2px;transition:color .2s}
 .nav-links>li>a::after{content:'';position:absolute;bottom:0;left:0;right:100%;height:1.5px;background:var(--gold);transition:right .25s}
-.nav-links>li>a:hover{color:var(--navy)}
+.nav-links>li>a:hover{color:var(--gold-light)}
 .nav-links>li>a:hover::after{right:0}
 /* ── DROPDOWN: gap-free hover ── */
   .nav-dropdown{position:relative}
@@ -78,11 +79,11 @@ nav.scrolled{box-shadow:var(--shadow)}
   .nav-dropdown-menu a{display:block;padding:.55rem 1.25rem;font-size:.8rem;color:var(--text-mid);transition:color .15s,background .15s;text-decoration:none;white-space:nowrap}
   .nav-dropdown-menu a:hover{color:var(--navy);background:var(--gold-dim)}
   .nav-dropdown-menu a::after{content:none!important}
-.nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.55rem 1.35rem!important;border-radius:var(--radius);font-weight:600!important;font-size:.78rem!important;letter-spacing:.07em!important;text-transform:uppercase;transition:background .2s,transform .15s!important}
+.nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:.55rem 1.35rem!important;border-radius:var(--radius);font-weight:600!important;font-size:.78rem!important;letter-spacing:.07em!important;text-transform:uppercase;transition:background .2s,transform .15s!important}
 .nav-cta::after{content:none!important}
-.nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
+.nav-cta:hover{background:var(--gold-light)!important;color:var(--navy)!important;transform:translateY(-1px)}
 .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
-.hamburger span{width:22px;height:2px;background:var(--navy);display:block;border-radius:2px;transition:.3s}
+.hamburger span{width:22px;height:2px;background:var(--white);display:block;border-radius:2px;transition:.3s}
 .mobile-nav{display:none;position:fixed;top:128px;left:0;right:0;background:var(--white);border-top:1px solid rgba(201,168,76,0.15);padding:1.5rem 5%;z-index:99;box-shadow:0 8px 32px rgba(26,39,68,0.1)}
 .mobile-nav.open{display:block}
 .mobile-nav a{display:block;padding:.65rem 0;font-size:.9rem;color:var(--text-mid);border-bottom:1px solid rgba(26,39,68,0.05)}
@@ -106,7 +107,7 @@ nav.scrolled{box-shadow:var(--shadow)}
 .section-title em{font-style:italic;color:var(--gold)}
 .section-sub{font-size:.97rem;color:var(--text-mid);max-width:540px;line-height:1.75;font-weight:300}
 .section-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:3rem;flex-wrap:wrap;gap:1.5rem}
-section{padding:6rem 5%}
+section{padding:6rem 0}
 section .container{}
 
 /* BUTTONS */
@@ -133,7 +134,7 @@ section .container{}
 
 /* TRUST BAR */
 .trust-bar{background:var(--navy);padding:1.1rem 0}
-.trust-bar-inner{max-width:var(--max);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap}
+.trust-bar-inner{max-width:var(--max);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:center;gap:1.75rem;flex-wrap:wrap}
 .trust-item{display:flex;align-items:center;gap:.55rem;font-size:.78rem;color:rgba(255,255,255,.72);letter-spacing:.025em}
 .trust-item svg{color:var(--gold);flex-shrink:0}
 .trust-divider{width:1px;height:18px;background:rgba(255,255,255,.14)}
@@ -148,7 +149,7 @@ section .container{}
 footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.58)}
 .footer-inner{max-width:var(--max);margin:0 auto;padding:0 5%}
 .footer-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.footer-logo img{height:96px;width:auto;margin-bottom:1rem}
+.footer-logo img{height:96px;width:auto;display:block;margin-bottom:1rem}
 .footer-brand p{font-size:.84rem;line-height:1.72;font-weight:300;max-width:270px}
 .footer-social{display:flex;gap:.65rem;margin-top:1.4rem}
 .social-link{width:34px;height:34px;border:1px solid rgba(255,255,255,.14);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.45);font-size:.75rem;font-weight:600;transition:border-color .2s,color .2s}
@@ -184,7 +185,7 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 .reveal.visible{opacity:1;transform:none}
 
 /* ACTIVE NAV */
-.nav-links a.active{color:var(--navy)}
+.nav-links a.active{color:var(--gold-light)}
 .nav-links a.active::after{right:0}
 
 /* ANIMATIONS */
@@ -262,13 +263,13 @@ footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.5
 <nav id="navbar">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="logo.png" alt="SK Financial Group"></a>
-    <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="mortgage.html">Mortgage ▾</a><div class="nav-dropdown-menu"><a href="mortgage.html#first-home-buyer">First Home Buyer</a><a href="mortgage.html#refinance">Refinance</a><a href="mortgage.html#investment-property">Investment Property</a><a href="mortgage.html#renovation">Renovation Loan</a><a href="mortgage.html#loan-to-build">Loan to Build</a><a href="mortgage.html#bridging-finance">Bridging Finance</a><a href="mortgage.html#top-up">Top Up / Restructure</a><a href="mortgage.html#business-lending">Business Lending</a><a href="mortgage.html#commercial-lending">Commercial Lending</a><a href="mortgage.html#development">Property Development</a><a href="mortgage.html#rates">Home Loan Rates NZ</a><a href="mortgage.html#low-deposit">Low Deposit Mortgage</a></div></li><li class="nav-dropdown"><a href="insurance.html">Insurance ▾</a><div class="nav-dropdown-menu"><a href="insurance.html#health">Health Insurance</a><a href="insurance.html#life">Life Insurance</a><a href="insurance.html#trauma">Trauma Insurance</a><a href="insurance.html#tpd">Total & Permanent Disability</a><a href="insurance.html#income-protection">Income Protection</a><a href="insurance.html#mortgage-protection">Mortgage Protection</a></div></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Free Consultation</a></li></ul>
+    <ul class="nav-links"><li><a href="index.html">Home</a></li><li class="nav-dropdown"><a href="mortgage.html">Mortgage ▾</a><div class="nav-dropdown-menu"><a href="mortgage.html#first-home-buyer">First Home Buyer</a><a href="mortgage.html#refinance">Refinance</a><a href="mortgage.html#investment-property">Investment Property</a><a href="mortgage.html#renovation">Renovation Loan</a><a href="mortgage.html#loan-to-build">Loan to Build</a><a href="mortgage.html#bridging-finance">Bridging Finance</a><a href="mortgage.html#top-up">Top Up / Restructure</a><a href="mortgage.html#business-lending">Business Lending</a><a href="mortgage.html#commercial-lending">Commercial Lending</a><a href="mortgage.html#development">Property Development</a><a href="mortgage.html#rates">Home Loan Rates NZ</a><a href="mortgage.html#low-deposit">Low Deposit Mortgage</a></div></li><li class="nav-dropdown"><a href="insurance.html">Insurance ▾</a><div class="nav-dropdown-menu"><a href="insurance.html#health">Health Insurance</a><a href="insurance.html#life">Life Insurance</a><a href="insurance.html#trauma">Trauma Insurance</a><a href="insurance.html#tpd">Total & Permanent Disability</a><a href="insurance.html#income-protection">Income Protection</a><a href="insurance.html#mortgage-protection">Mortgage Protection</a></div></li><li><a href="disclosure.html">Disclosure</a></li><li><a href="about.html">About</a></li><li><a href="blog.html">Blog</a></li><li><a href="contact.html" class="nav-cta">Free Consultation</a></li></ul>
     <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
-<div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="m-section">Mortgage</div><a href="mortgage.html#first-home-buyer" style="padding-left:1rem">First Home Buyer</a><a href="mortgage.html#refinance" style="padding-left:1rem">Refinance</a><a href="mortgage.html#investment-property" style="padding-left:1rem">Investment Property</a><a href="mortgage.html#renovation" style="padding-left:1rem">Renovation Loan</a><a href="mortgage.html#loan-to-build" style="padding-left:1rem">Loan to Build</a><a href="mortgage.html#bridging-finance" style="padding-left:1rem">Bridging Finance</a><a href="mortgage.html#top-up" style="padding-left:1rem">Top Up / Restructure</a><a href="mortgage.html#business-lending" style="padding-left:1rem">Business Lending</a><a href="mortgage.html#commercial-lending" style="padding-left:1rem">Commercial Lending</a><a href="mortgage.html#development" style="padding-left:1rem">Property Development</a><a href="mortgage.html#rates" style="padding-left:1rem">Home Loan Rates NZ</a><a href="mortgage.html#low-deposit" style="padding-left:1rem">Low Deposit Mortgage</a><div class="m-section">Insurance</div><a href="insurance.html#health" style="padding-left:1rem">Health Insurance</a><a href="insurance.html#life" style="padding-left:1rem">Life Insurance</a><a href="insurance.html#trauma" style="padding-left:1rem">Trauma Insurance</a><a href="insurance.html#tpd" style="padding-left:1rem">Total & Permanent Disability</a><a href="insurance.html#income-protection" style="padding-left:1rem">Income Protection</a><a href="insurance.html#mortgage-protection" style="padding-left:1rem">Mortgage Protection</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html" style="color:var(--gold);font-weight:600">Free Consultation</a></div>
+<div class="mobile-nav" id="mobileNav"><a href="index.html">Home</a><div class="m-section">Mortgage</div><a href="mortgage.html#first-home-buyer" style="padding-left:1rem">First Home Buyer</a><a href="mortgage.html#refinance" style="padding-left:1rem">Refinance</a><a href="mortgage.html#investment-property" style="padding-left:1rem">Investment Property</a><a href="mortgage.html#renovation" style="padding-left:1rem">Renovation Loan</a><a href="mortgage.html#loan-to-build" style="padding-left:1rem">Loan to Build</a><a href="mortgage.html#bridging-finance" style="padding-left:1rem">Bridging Finance</a><a href="mortgage.html#top-up" style="padding-left:1rem">Top Up / Restructure</a><a href="mortgage.html#business-lending" style="padding-left:1rem">Business Lending</a><a href="mortgage.html#commercial-lending" style="padding-left:1rem">Commercial Lending</a><a href="mortgage.html#development" style="padding-left:1rem">Property Development</a><a href="mortgage.html#rates" style="padding-left:1rem">Home Loan Rates NZ</a><a href="mortgage.html#low-deposit" style="padding-left:1rem">Low Deposit Mortgage</a><div class="m-section">Insurance</div><a href="insurance.html#health" style="padding-left:1rem">Health Insurance</a><a href="insurance.html#life" style="padding-left:1rem">Life Insurance</a><a href="insurance.html#trauma" style="padding-left:1rem">Trauma Insurance</a><a href="insurance.html#tpd" style="padding-left:1rem">Total & Permanent Disability</a><a href="insurance.html#income-protection" style="padding-left:1rem">Income Protection</a><a href="insurance.html#mortgage-protection" style="padding-left:1rem">Mortgage Protection</a><a href="disclosure.html">Disclosure</a><a href="about.html">About</a><a href="blog.html">Blog</a><a href="contact.html" style="color:var(--gold);font-weight:600">Free Consultation</a></div>
 
 <section style="min-height:calc(100vh - 128px);display:flex;align-items:center;padding-top:128px;background:var(--off-white)">
   <div class="container" style="text-align:center">

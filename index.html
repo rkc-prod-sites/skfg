@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SK Financial Group | Auckland Mortgage Broker NZ</title>
-<meta name="description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. NZA Top 25 Broker.">
+<meta name="description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. 2025 NZA Top 25 Broker.">
 <meta name="keywords" content="mortgage broker Auckland, home loans NZ, first home buyer mortgage, insurance adviser NZ, refinance NZ, investment property loan, SK Financial Group">
 <meta name="robots" content="index, follow">
 <meta name="author" content="SK Financial Group">
@@ -12,7 +12,7 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:title" content="SK Financial Group | Auckland Mortgage Broker & Insurance Adviser NZ">
-<meta property="og:description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. NZA Top 25 Broker.">
+<meta property="og:description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. 2025 NZA Top 25 Broker.">
 <meta property="og:url" content="https://skfg.co.nz/">
 <meta property="og:site_name" content="SK Financial Group">
 <meta property="og:image" content="https://skfg.co.nz/og-image.jpg">
@@ -20,7 +20,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="SK Financial Group | Auckland Mortgage Broker & Insurance Adviser NZ">
 <meta name="twitter:image" content="https://skfg.co.nz/og-image.jpg">
-<meta name="twitter:description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. NZA Top 25 Broker.">
+<meta name="twitter:description" content="Auckland's trusted mortgage broker and insurance adviser. Expert home loan, refinance and insurance advice. 2025 NZA Top 25 Broker.">
 <!-- Schema.org -->
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FinancialService","name":"SK Financial Group","description":"Auckland mortgage broker and insurance adviser","image":"https://skfg.co.nz/og-image.jpg","url":"https://skfg.co.nz","telephone":"+64-9-553-6223","priceRange":"Free consultation","address":{"@type":"PostalAddress","streetAddress":"3024a Great North Road","addressLocality":"New Lynn","addressRegion":"Auckland","postalCode":"0600","addressCountry":"NZ"},"geo":{"@type":"GeoCoordinates","latitude":-36.9001,"longitude":174.6861},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"17:30"}],"sameAs":["https://www.facebook.com/skfgnz","https://www.instagram.com/skfinancialgroupnz/","https://www.linkedin.com/company/sk-financial-group-mortgage-insurance/","https://twitter.com/skfgnz"]}</script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -56,14 +56,16 @@
   body{font-family:var(--sans);color:var(--text-dark);background:var(--white);overflow-x:hidden;line-height:1.6}
 
   /* ── NAV ── */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(201,168,76,0.2);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:128px;transition:box-shadow .3s}
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy-deep);border-bottom:1px solid rgba(201,168,76,0.25);display:flex;align-items:center;height:128px;transition:box-shadow .3s}
+  .nav-inner{max-width:var(--max, 1400px);margin:0 auto;padding:0 5%;display:flex;align-items:center;justify-content:space-between;width:100%}
   nav.scrolled{box-shadow:var(--shadow)}
-  .nav-logo img{height:96px;display:block}
+  .nav-logo{display:flex;align-items:center}
+  .nav-logo img{height:96px;width:auto;display:block}
 
   .nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
-  .nav-links a{font-size:.875rem;font-weight:500;letter-spacing:.03em;color:var(--text-mid);text-decoration:none;position:relative;padding-bottom:2px;transition:color .2s}
+  .nav-links a{font-size:.875rem;font-weight:500;letter-spacing:.03em;color:rgba(255,255,255,.8);text-decoration:none;position:relative;padding-bottom:2px;transition:color .2s}
   .nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:100%;height:1.5px;background:var(--gold);transition:right .25s ease}
-  .nav-links a:hover{color:var(--navy)}
+  .nav-links a:hover{color:var(--gold-light)}
   .nav-links a:hover::after{right:0}
 
   /* ── DROPDOWN: gap-free hover ── */
@@ -105,12 +107,12 @@
   .nav-dropdown-menu a:hover { color: var(--navy); background: var(--gold-dim); }
   .nav-dropdown-menu a::after { content: none !important; }
 
-  .nav-cta{background:var(--navy)!important;color:var(--white)!important;padding:.58rem 1.4rem!important;border-radius:var(--radius);font-weight:500!important;font-size:.8rem!important;letter-spacing:.06em!important;text-transform:uppercase;transition:background .2s,transform .15s!important}
+  .nav-cta{background:var(--gold)!important;color:var(--navy)!important;padding:.58rem 1.4rem!important;border-radius:var(--radius);font-weight:500!important;font-size:.8rem!important;letter-spacing:.06em!important;text-transform:uppercase;transition:background .2s,transform .15s!important}
   .nav-cta::after{content:none!important}
-  .nav-cta:hover{background:var(--gold)!important;color:var(--navy)!important;transform:translateY(-1px)}
+  .nav-cta:hover{background:var(--gold-light)!important;color:var(--navy)!important;transform:translateY(-1px)}
 
   .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
-  .hamburger span{width:22px;height:2px;background:var(--navy);display:block;border-radius:2px}
+  .hamburger span{width:22px;height:2px;background:var(--white);display:block;border-radius:2px}
   .mobile-nav{display:none;position:fixed;top:128px;left:0;right:0;background:var(--white);border-top:1px solid rgba(201,168,76,.15);padding:1.5rem 5%;z-index:99;box-shadow:0 8px 32px rgba(26,39,68,.1);max-height:80vh;overflow-y:auto}
   .mobile-nav.open{display:block}
   .mobile-nav a{display:block;padding:.6rem 0;font-size:.9rem;color:var(--text-mid);border-bottom:1px solid rgba(26,39,68,.05);text-decoration:none}
@@ -153,15 +155,30 @@
   .btn-primary:hover{background:var(--gold);color:var(--navy);transform:translateY(-2px);box-shadow:0 8px 24px rgba(201,168,76,.3)}
   .btn-outline{background:transparent;color:var(--navy);padding:.85rem 1.8rem;border-radius:var(--radius);font-weight:500;font-size:.875rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1.5px solid var(--navy);transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
   .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-gold{background:var(--gold);color:var(--navy);padding:.85rem 1.9rem;border-radius:var(--radius);font-weight:600;font-size:.86rem;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:none;cursor:pointer;transition:all .2s;display:inline-flex;align-items:center;gap:.5rem}
+  .btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
 
   /* Trust bar */
-  .trust-bar{background:var(--navy);padding:1.25rem 5%;display:flex;align-items:center;justify-content:center;gap:3rem;flex-wrap:wrap}
+  .trust-bar{background:var(--navy);padding:1.25rem 5%}
+  .trust-bar-inner{max-width:var(--max,1400px);margin:0 auto;display:flex;align-items:center;justify-content:center;gap:1.75rem;flex-wrap:wrap}
   .trust-item{display:flex;align-items:center;gap:.6rem;font-size:.8rem;color:rgba(255,255,255,.75);letter-spacing:.03em}
   .trust-item svg{color:var(--gold);flex-shrink:0}
   .trust-divider{width:1px;height:20px;background:rgba(255,255,255,.15)}
+  /* TRUST_MOBILE_FIX_MARKER */
+  @media(max-width:900px){
+    .trust-bar-inner{gap:1.25rem 1rem}
+    .trust-item{font-size:.72rem}
+    .trust-divider{display:none}
+  }
+  @media(max-width:600px){
+    .trust-bar-inner{flex-direction:column;align-items:flex-start;gap:.75rem}
+    .trust-item{font-size:.75rem}
+  }
+
 
   /* Sections */
   section{padding:6rem 5%}
+  section>*{max-width:var(--max,1400px);margin-left:auto;margin-right:auto}
   .section-label{display:inline-flex;align-items:center;gap:.5rem;font-size:.7rem;font-weight:600;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
   .section-label::before{content:'';width:24px;height:1.5px;background:var(--gold)}
   .section-title{font-family:var(--serif);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:300;line-height:1.2;color:var(--navy);margin-bottom:1rem}
@@ -205,6 +222,11 @@
   .why .section-sub{color:rgba(255,255,255,.6)}
   .why .section-label{color:var(--gold-light)}
   .why .section-label::before{background:var(--gold-light)}
+  .section-label-light{color:var(--gold-light)}
+  .section-label-light::before{background:var(--gold-light)}
+  @media(max-width:900px){
+    .protection-panel-content{padding:2.5rem 1.75rem!important}
+  }
   .why-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,.06);border-radius:8px;overflow:hidden}
   .why-item{background:var(--navy-mid);padding:2.25rem;display:flex;gap:1.25rem;transition:background .2s}
   .why-item:hover{background:rgba(255,255,255,.04)}
@@ -218,9 +240,7 @@
   .about-image-wrap{position:relative}
   .about-image-wrap::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:2px solid rgba(201,168,76,.3);border-radius:8px;z-index:0}
   .about-image-wrap img{width:100%;border-radius:8px;display:block;position:relative;z-index:1;box-shadow:var(--shadow-lg)}
-  .about-badge{position:absolute;bottom:-20px;right:-20px;z-index:2;background:var(--gold);color:var(--navy);padding:1.25rem 1.5rem;border-radius:8px;text-align:center;box-shadow:var(--shadow)}
-  .about-badge-num{font-family:var(--serif);font-size:2rem;font-weight:600;line-height:1;display:block}
-  .about-badge-text{font-size:.7rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;display:block;margin-top:.2rem}
+  .about-badge{position:absolute;bottom:-24px;right:-24px;z-index:2;width:150px;height:150px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.25))}
   .about-content p{font-size:.95rem;color:var(--text-mid);line-height:1.75;margin-bottom:1rem;font-weight:300}
   .about-credentials{display:flex;gap:2rem;margin-top:2rem;padding-top:2rem;border-top:1px solid rgba(26,39,68,.1);flex-wrap:wrap}
   .cred-label{font-size:.7rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.2rem}
@@ -350,11 +370,9 @@
 
   @media(max-width:900px){
     .about-badge{
-      bottom:12px!important;right:12px!important;
-      padding:.7rem .9rem!important;
+      bottom:10px!important;right:10px!important;
+      width:100px!important;height:100px!important;
     }
-    .about-badge span:first-child,.about-badge-num{font-size:1.15rem!important}
-    .about-badge span:last-child,.about-badge-text{font-size:.6rem!important}
   }
 
 </style>
@@ -375,7 +393,7 @@
     gtag('config', 'G-DMN3HR8LPR');
   </script>
 
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much deposit do I need for a mortgage in NZ?","acceptedAnswer":{"@type":"Answer","text":"Generally a 20% deposit is required, though low deposit options (10% or less) are available for eligible buyers, particularly first home buyers. We'll assess your situation and find the right path."}},{"@type":"Question","name":"Is it hard to get a mortgage in New Zealand?","acceptedAnswer":{"@type":"Answer","text":"It can be challenging with a low credit score or limited deposit, but with the right advice and preparation, securing a mortgage is absolutely achievable. That's exactly what we're here for."}},{"@type":"Question","name":"What are the current home loan rates in NZ?","acceptedAnswer":{"@type":"Answer","text":"Rates vary by lender and loan type. We constantly monitor the market and have access to special rates not available directly to the public. Contact us for a personalised rate comparison."}},{"@type":"Question","name":"How long does mortgage approval take?","acceptedAnswer":{"@type":"Answer","text":"Pre-approval typically takes 1\u20132 business days once we have your documents. Full approval after finding a property usually takes 3\u20135 business days depending on the lender."}},{"@type":"Question","name":"What insurance do I need when buying a home?","acceptedAnswer":{"@type":"Answer","text":"Most lenders require home and contents insurance at minimum. We also recommend reviewing life insurance, mortgage protection, and income protection to safeguard your repayments."}},{"@type":"Question","name":"How do I qualify for a First Home Loan?","acceptedAnswer":{"@type":"Answer","text":"Key criteria include stable income, good credit history, and a minimum deposit. You may be eligible for the First Home Grant or First Home Loan scheme. Book a free consultation and we'll assess your eligibility."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much deposit do I need for a mortgage in NZ?","acceptedAnswer":{"@type":"Answer","text":"Generally a 20% deposit is required, though low deposit options (10% or less) are available for eligible buyers, particularly first home buyers. We'll assess your situation and find the right path."}},{"@type":"Question","name":"Is it hard to get a mortgage in New Zealand?","acceptedAnswer":{"@type":"Answer","text":"It can be challenging with a low credit score or limited deposit, but with the right advice and preparation, securing a mortgage is absolutely achievable. That's exactly what we're here for."}},{"@type":"Question","name":"What are the current home loan rates in NZ?","acceptedAnswer":{"@type":"Answer","text":"Rates vary by lender and loan type. We constantly monitor the market and have access to special rates not available directly to the public. Contact us for a personalised rate comparison."}},{"@type":"Question","name":"How long does mortgage approval take?","acceptedAnswer":{"@type":"Answer","text":"Pre-approval typically takes 1\u20132 business days once we have your documents. Full approval after finding a property usually takes 3\u20135 business days depending on the lender."}},{"@type":"Question","name":"What insurance do I need when buying a home?","acceptedAnswer":{"@type":"Answer","text":"Most lenders require house insurance at minimum. We also recommend reviewing life insurance, mortgage protection and income protection to safeguard your repayments."}},{"@type":"Question","name":"How do I qualify for a First Home Loan?","acceptedAnswer":{"@type":"Answer","text":"Key criteria include stable income, good credit history, minimum level of unsecured lending and savings history. You may be eligible for the first home loan scheme. Book a free consultation and we'll assess your eligibility."}}]}</script>
 
   <!-- Google Search Console verification — paste your tag here once you verify ownership
   <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE"> -->
@@ -384,6 +402,7 @@
 
 <!-- NAV -->
 <nav id="navbar">
+  <div class="nav-inner">
   <a href="index.html" class="nav-logo"><img src="logo.png" alt="SK Financial Group"></a>
   <ul class="nav-links">
     <li><a href="index.html">Home</a></li>
@@ -415,6 +434,7 @@
         <a href="insurance.html#mortgage-protection">Mortgage Protection</a>
       </div>
     </li>
+    <li><a href="disclosure.html">Disclosure</a></li>
     <li><a href="about.html">About</a></li>
     <li><a href="blog.html">Blog</a></li>
     <li><a href="contact.html" class="nav-cta">Free Consultation</a></li>
@@ -422,6 +442,7 @@
   <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
     <span></span><span></span><span></span>
   </button>
+  </div>
 </nav>
 
 <!-- MOBILE NAV -->
@@ -443,6 +464,7 @@
   <a href="insurance.html#trauma" style="padding-left:1rem">Trauma Insurance</a>
   <a href="insurance.html#income-protection" style="padding-left:1rem">Income Protection</a>
   <a href="insurance.html#mortgage-protection" style="padding-left:1rem">Mortgage Protection</a>
+  <a href="disclosure.html">Disclosure</a>
   <a href="about.html">About</a>
   <a href="blog.html">Blog</a>
   <a href="contact.html" style="color:var(--gold);font-weight:600">Free Consultation</a>
@@ -476,17 +498,17 @@
 
   <div class="hero-card">
     <h3>Get a free consultation</h3>
-    <p>No obligation · Serving NZ families since 2023 · Expert advice</p>
+    <p>No obligation · Servicing New Zealand communities and friends since 2023 · Expert Financial Advice</p>
     <form action="https://formspree.io/f/myeggglo" method="POST">
       <input type="hidden" name="_subject" value="New enquiry — SKFG website (Homepage hero)">
       <input type="hidden" name="form_source" value="Homepage hero form">
       <div class="form-grid">
-<div class="form-group"><label>First name</label><input type="text" placeholder="John" name="first_name" required></div>
-      <div class="form-group"><label>Last name</label><input type="text" placeholder="Smith" name="last_name" required></div>
-      <div class="form-group full"><label>Email address</label><input type="email" placeholder="your@email.com" name="email" required></div>
-      <div class="form-group"><label>Phone</label><input type="tel" placeholder="021 000 0000" name="phone" required></div>
+<div class="form-group"><label>First name</label><input type="text" placeholder="" name="first_name" required></div>
+      <div class="form-group"><label>Last name</label><input type="text" placeholder="" name="last_name" required></div>
+      <div class="form-group full"><label>Email address</label><input type="email" placeholder="" name="email" required></div>
+      <div class="form-group"><label>Phone</label><input type="tel" placeholder="" name="phone" required></div>
       <div class="form-group"><label>I need help with</label>
-        <select name="service"><option value="">Select service</option><option>First Home Buyer</option><option>Refinance</option><option>Investment Property</option><option>Life Insurance</option><option>Health Insurance</option><option>Income Protection</option><option>Other</option></select>
+        <select name="service"><option value="">Select service</option><option>First Home Buyer</option><option>Refinance</option><option>Investment Property</option><option>Construction Lending</option><option>Business Lending</option><option>Commercial Lending</option><option>Life Insurance</option><option>Health Insurance</option><option>Trauma Insurance</option><option>Income Protection</option><option>Other</option></select>
       </div>
       <div class="form-group full">
         <button type="submit" class="btn-primary" style="width:100%;justify-content:center">Make an Appointment</button>
@@ -499,15 +521,17 @@
 
 <!-- TRUST BAR -->
 <div class="trust-bar">
-  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>FMA Registered Adviser</div>
+  <div class="trust-bar-inner">
+  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Registered Financial Adviser</div>
   <div class="trust-divider"></div>
   <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Same-day response</div>
   <div class="trust-divider"></div>
   <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>30+ lenders &amp; insurers</div>
   <div class="trust-divider"></div>
-  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Serving NZ families since 2023</div>
+  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>Servicing NZ families since 2023</div>
   <div class="trust-divider"></div>
-  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>NZA Top 25 Broker</div>
+  <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>2025 NZA Top 25 Broker</div>
+  </div>
 </div>
 
 <!-- SERVICES -->
@@ -525,7 +549,7 @@
       <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
       <h3>Home Mortgages</h3>
-      <p>First home buyers, refinancing, renovation loans, bridging finance, low deposit options, and loan-to-build solutions tailored to your situation.</p>
+      <p>First home buyers, investors, construction, refinance, bridging finance and debt restructuring solutions tailored to your situation.</p>
       <div class="service-sub-items">
         <span class="service-tag">First Home</span><span class="service-tag">Refinance</span><span class="service-tag">Low Deposit</span><span class="service-tag">Renovation</span><span class="service-tag">+4 more</span>
       </div>
@@ -537,7 +561,7 @@
       <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
       <h3>Insurance Cover</h3>
-      <p>Protect what matters most with life, health, trauma, income protection, mortgage protection, and TPD insurance from leading NZ providers.</p>
+      <p>Protect what matters most with health, life, trauma, income protection, mortgage protection, TPD insurance from leading New Zealand providers.</p>
       <div class="service-sub-items">
         <span class="service-tag">Life</span><span class="service-tag">Health</span><span class="service-tag">Trauma</span><span class="service-tag">Income Protection</span><span class="service-tag">+2 more</span>
       </div>
@@ -549,7 +573,7 @@
       <div class="service-card-body">
       <div class="service-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></div>
       <h3>Business &amp; Commercial</h3>
-      <p>Business lending, commercial property finance, and property development funding. We understand the needs of NZ business owners.</p>
+      <p>Business lending, commercial property finance and property development funding. We understand the needs of New Zealand business owners.</p>
       <div class="service-sub-items">
         <span class="service-tag">Business Lending</span><span class="service-tag">Commercial</span><span class="service-tag">Development</span>
       </div>
@@ -572,11 +596,11 @@
   <div class="why-grid">
     <div class="why-item">
       <div class="why-num">01</div>
-      <div><h4>Expert, experienced advice</h4><p>Years of NZ market experience means we know how to structure deals that work, especially in complex situations like self-employment or low deposit scenarios.</p></div>
+      <div><h4>Expert, experienced advice</h4><p>Years of New Zealand market experience means we know how to structure deals that work, especially in complex situations like self-employment or low deposit scenarios.</p></div>
     </div>
     <div class="why-item">
       <div class="why-num">02</div>
-      <div><h4>Tailored to your situation</h4><p>No two clients are the same. We take the time to understand your goals and build solutions around them — not the other way around.</p></div>
+      <div><h4>Tailored to your situation</h4><p>No two situations are the same. We take the time to understand your goals and build solutions around them - not the other way around.</p></div>
     </div>
     <div class="why-item">
       <div class="why-num">03</div>
@@ -584,7 +608,7 @@
     </div>
     <div class="why-item">
       <div class="why-num">04</div>
-      <div><h4>Serving NZ families since 2023</h4><p>Our advice is completely free. We're compensated by lenders and insurers when we place business — so you get expert guidance with zero out-of-pocket cost.</p></div>
+      <div><h4>Servicing New Zealand communities and families since 2023</h4><p>Our advice is completely free. We're compensated by lenders and insurers - so you get expert guidance with zero out of pocket cost.</p></div>
     </div>
   </div>
 </section>
@@ -594,10 +618,7 @@
   <div class="about-grid">
     <div class="about-image-wrap">
       <img src="broker-photo.jpg" alt="SK Financial Group Adviser" id="brokerPhoto">
-      <div class="about-badge">
-        <span class="about-badge-num">NZA</span>
-        <span class="about-badge-text">Top 25 Broker</span>
-      </div>
+      <img src="nza-badge.png" alt="NZA 2025 Top 25 Broker Medal" class="about-badge" style="position:absolute;bottom:-24px;right:-24px;z-index:2;width:150px;height:150px;filter:drop-shadow(0 8px 20px rgba(0,0,0,.25))">
     </div>
     <div class="about-content">
       <div class="section-label">About us</div>
@@ -608,7 +629,7 @@
       <div class="about-credentials">
         <div class="cred-item"><div class="cred-label">Location</div><div class="cred-value">New Lynn, Auckland</div></div>
         <div class="cred-item"><div class="cred-label">Phone</div><div class="cred-value">09-553 6223</div></div>
-        <div class="cred-item"><div class="cred-label">Registered</div><div class="cred-value">FMA Adviser</div></div>
+        <div class="cred-item"><div class="cred-label">Registered</div><div class="cred-value">FSP 1005116</div></div>
       </div>
       <div style="margin-top:2rem"><a href="about.html" class="btn-primary">Meet the team →</a></div>
     </div>
@@ -622,8 +643,8 @@
       <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80" alt="Insurance protection" style="width:100%;height:100%;object-fit:cover;display:block;opacity:.7">
       <div style="position:absolute;inset:0;background:linear-gradient(90deg,transparent,var(--navy))"></div>
     </div>
-    <div style="padding:3rem 3rem 3rem 0">
-      <div class="section-label" style="color:var(--gold-light)"><span style="background:var(--gold-light);width:24px;height:1.5px;display:inline-block"></span>Protection cover</div>
+    <div class="protection-panel-content" style="padding:3rem 3rem 3rem 0">
+      <div class="section-label section-label-light">Protection cover</div>
       <h2 class="section-title" style="color:var(--white)">Is your family <em>protected?</em></h2>
       <p style="font-size:.93rem;color:rgba(255,255,255,.6);line-height:1.75;margin-bottom:1.5rem;font-weight:300">1 in 3 New Zealanders will be diagnosed with cancer in their lifetime. Life, trauma, income protection and health insurance ensure your family's financial security — whatever happens.</p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap">
@@ -647,24 +668,24 @@
     <div class="review-card">
       <div class="review-quote">"</div>
       <div class="review-stars"><span>★★★★★</span></div>
-      <p class="review-text">SKFG helped us secure our first home when we thought it wasn't possible. Patient, knowledgeable, and available whenever we had questions. Couldn't recommend them more highly.</p>
-      <div class="reviewer"><div class="reviewer-avatar">AR</div><div><div class="reviewer-name">Aroha &amp; Ravi</div><div class="reviewer-label">First Home Buyer, Auckland</div></div></div>
+      <p class="review-text">I'm truly grateful to Saneel for helping me achieve one of the biggest milestones of my life — buying my first home in New Zealand. 🏡❤️ Saneel guided me patiently, step by step, not only in securing the best mortgage for my situation but also in understanding due diligence and the pros and cons of buying a property. His expertise, hard work and continued support over the past year gave me the confidence to make the right decision. What I appreciated most was his patience, availability and genuine willingness to explain everything clearly whenever I needed guidance. He always made the process feel easier and gave me confidence throughout the journey. Thank you from the bottom of my heart, Saneel for your guidance, support and hard work in making my first home journey so much easier and more meaningful. I'm truly grateful and hope this is just the beginning of many more properties and a stronger financial future! 🙏🏡 Highly recommended to anyone looking for a knowledgeable, trustworthy and genuinely caring mortgage adviser.</p>
+      <div class="reviewer"><div class="reviewer-avatar">KR</div><div><div class="reviewer-name">khan rizwan</div><div class="reviewer-label">First Home Buyer, Auckland</div></div></div>
     </div>
     <div class="review-card">
       <div class="review-quote">"</div>
       <div class="review-stars"><span>★★★★★</span></div>
-      <p class="review-text">Refinanced through SKFG and saved significantly on our mortgage. The process was seamless and the advice was genuinely tailored to our situation. Highly recommend.</p>
-      <div class="reviewer"><div class="reviewer-avatar">JM</div><div><div class="reviewer-name">James M.</div><div class="reviewer-label">Refinance Client, West Auckland</div></div></div>
+      <p class="review-text">5 Stars!!! I can't recommend Saneel highly enough. As a business owner, my financial situation is complex than most, but he handled everything with absolute expertise. Saneel took the time to understand my specific needs and secured a great deal for my portfolio. If you need a broker who is professional, efficient, and actually understands the self employed landscape, Saneel is the one!</p>
+      <div class="reviewer"><div class="reviewer-avatar">AS</div><div><div class="reviewer-name">Ashwant Sahay</div><div class="reviewer-label">Business Owner, Auckland</div></div></div>
     </div>
     <div class="review-card">
       <div class="review-quote">"</div>
       <div class="review-stars"><span>★★★★★</span></div>
-      <p class="review-text">As a self-employed business owner, getting a mortgage felt daunting. The team at SKFG understood our circumstances and found us a great deal. Professional, responsive, and honest.</p>
-      <div class="reviewer"><div class="reviewer-avatar">PK</div><div><div class="reviewer-name">Priya K.</div><div class="reviewer-label">Investment Property, Auckland</div></div></div>
+      <p class="review-text">I can't recommend Saneel highly enough. His knowledge, professionalism, and attention to detail was outstanding, and he consistently went above and beyond to ensure everything was handled efficiently. Saneel took the time to explain my options as a first-time buyer, he was always responsive and genuinely has my best interests at heart. I was well supported throughout the whole process. Saneel, I can't thank you enough 😊</p>
+      <div class="reviewer"><div class="reviewer-avatar">KL</div><div><div class="reviewer-name">Karen Lockwood</div><div class="reviewer-label">First-Time Buyer, Auckland</div></div></div>
     </div>
   </div>
   <div class="reviews-cta">
-    <a href="https://www.google.com/maps/search/?api=1&query=SK+Financial+Group+3024a+Great+North+Road+New+Lynn+Auckland" target="_blank" class="google-badge" style="font-size:.85rem;padding:.8rem 1.5rem">⭐ Proudly rated 5 stars on Google · Read all reviews</a>
+    <a href="https://www.google.com/maps/search/?api=1&query=SK+Financial+Group+3024a+Great+North+Road+New+Lynn+Auckland" target="_blank" class="google-badge" style="font-size:.85rem;padding:.8rem 1.5rem">⭐ Proudly rated 5.0 stars on Google · Based on 45 reviews · Read all reviews</a>
   </div>
 </section>
 
@@ -695,11 +716,11 @@
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">What insurance do I need when buying a home?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-      <div class="faq-a">Most lenders require home and contents insurance at minimum. We also recommend reviewing life insurance, mortgage protection, and income protection to safeguard your repayments.</div>
+      <div class="faq-a">Most lenders require house insurance at minimum. We also recommend reviewing life insurance, mortgage protection and income protection to safeguard your repayments.</div>
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="toggleFaq(this)">How do I qualify for a First Home Loan?<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></button>
-      <div class="faq-a">Key criteria include stable income, good credit history, and a minimum deposit. You may be eligible for the First Home Grant or First Home Loan scheme. Book a free consultation and we'll assess your eligibility.</div>
+      <div class="faq-a">Key criteria include stable income, good credit history, minimum level of unsecured lending and savings history. You may be eligible for the first home loan scheme. Book a free consultation and we'll assess your eligibility.</div>
     </div>
   </div>
 </section>
@@ -708,7 +729,7 @@
 <div class="lenders">
   <p class="lenders-label">Our lender &amp; insurer panel</p>
   <div class="lenders-track">
-    <span class="lender-name">ANZ</span><span class="lender-name">ASB</span><span class="lender-name">BNZ</span><span class="lender-name">Westpac</span><span class="lender-name">Kiwibank</span><span class="lender-name">SBS Bank</span><span class="lender-name">Co-operative</span><span class="lender-name">AIA</span><span class="lender-name">Partners Life</span><span class="lender-name">nib</span><span class="lender-name">Southern Cross</span><span class="lender-name">Aviva</span>
+    <span class="lender-name">ANZ</span><span class="lender-name">ASB</span><span class="lender-name">BNZ</span><span class="lender-name">Westpac</span><span class="lender-name">KiwiBank</span><span class="lender-name">Co-operative Bank</span><span class="lender-name">Bank of China</span><span class="lender-name">SBS Bank</span><span class="lender-name">TSB Bank</span><span class="lender-name">AIA</span><span class="lender-name">NIB</span><span class="lender-name">Asteron Life</span>
   </div>
 </div>
 
@@ -717,14 +738,9 @@
   <div class="section-label" style="justify-content:center">Start today</div>
   <h2 class="section-title" style="max-width:600px;margin:0 auto 1rem">Ready to take the next <em>step?</em></h2>
   <p style="color:rgba(255,255,255,.55);text-align:center;max-width:480px;margin:0 auto;font-size:.95rem;font-weight:300;line-height:1.7">Book your free, no-obligation consultation today. We'll assess your situation and outline the best path forward.</p>
-  <form action="https://formspree.io/f/myeggglo" method="POST" class="cta-form">
-    <input type="hidden" name="_subject" value="New enquiry — SKFG website (Homepage CTA)">
-    <input type="hidden" name="form_source" value="Homepage bottom CTA form">
-<input type="text" placeholder="Your name" name="name" required>
-    <input type="email" placeholder="Email address" name="email" required>
-    <select style="color:rgba(255,255,255,.7)" name="service"><option value="">Service needed</option><option>First Home Mortgage</option><option>Refinance</option><option>Investment Property</option><option>Insurance Review</option><option>Business Lending</option></select>
-    <button type="submit" class="btn-primary" style="white-space:nowrap">Book Now →</button>
-  </form>
+  <div style="margin-top:2.5rem;display:flex;justify-content:center">
+    <a href="contact.html" class="btn-gold" style="padding:1rem 2.5rem;font-size:.95rem">Get in Touch →</a>
+  </div>
   <p class="cta-sub">Or call us directly: <a href="tel:095536223" style="color:var(--gold-light)">09-553 6223</a> · <a href="tel:0210749825" style="color:var(--gold-light)">021 074 9825</a></p>
 </section>
 
@@ -783,18 +799,18 @@
     <div class="popup-header">
       <button class="popup-close" onclick="closePopup()">✕</button>
       <h3>Book your free consultation</h3>
-      <p>No obligation · Expert advice · Serving NZ families since 2023</p>
+      <p>No obligation · Servicing New Zealand communities and friends since 2023 · Expert Financial Advice</p>
     </div>
     <div class="popup-accent"></div>
     <div class="popup-body">
       <form action="https://formspree.io/f/myeggglo" method="POST">
         <input type="hidden" name="_subject" value="New enquiry — SKFG website (Homepage popup)">
         <input type="hidden" name="form_source" value="Popup — Homepage">
-        <div class="form-group"><label>Full name</label><input type="text" placeholder="Your full name" name="name" required></div>
-        <div class="form-group"><label>Email address</label><input type="email" placeholder="your@email.com" name="email" required></div>
-        <div class="form-group"><label>Phone number</label><input type="tel" placeholder="021 000 0000" name="phone" required></div>
+        <div class="form-group"><label>Full name</label><input type="text" placeholder="" name="name" required></div>
+        <div class="form-group"><label>Email address</label><input type="email" placeholder="" name="email" required></div>
+        <div class="form-group"><label>Phone number</label><input type="tel" placeholder="" name="phone" required></div>
         <div class="form-group"><label>How can we help?</label>
-          <select name="service"><option value="">Select a service</option><option>First Home Buyer</option><option>Refinance</option><option>Investment Property</option><option>Life Insurance</option><option>Health Insurance</option><option>Income Protection</option><option>Other</option></select>
+          <select name="service"><option value="">Select a service</option><option>First Home Buyer</option><option>Refinance</option><option>Investment Property</option><option>Construction Lending</option><option>Business Lending</option><option>Commercial Lending</option><option>Life Insurance</option><option>Health Insurance</option><option>Trauma Insurance</option><option>Income Protection</option><option>Other</option></select>
         </div>
         <button type="submit" class="btn-primary" style="width:100%;justify-content:center;margin-top:.5rem">Book My Free Consultation →</button>
         <p class="form-note" style="margin-top:1rem">🔒 Secure &amp; confidential. We never share your details.</p>
