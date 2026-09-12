@@ -113,7 +113,7 @@
 
   .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px}
   .hamburger span{width:22px;height:2px;background:var(--white);display:block;border-radius:2px}
-  .mobile-nav{display:none;position:fixed;top:128px;left:0;right:0;background:var(--white);border-top:1px solid rgba(201,168,76,.15);padding:1.5rem 5%;z-index:99;box-shadow:0 8px 32px rgba(26,39,68,.1);max-height:80vh;overflow-y:auto}
+  .mobile-nav{display:none;position:fixed;top:128px;left:0;right:0;bottom:0;background:var(--white);border-top:1px solid rgba(201,168,76,.15);padding:1.5rem 5% 3rem;z-index:99;box-shadow:0 8px 32px rgba(26,39,68,.1);max-height:calc(100vh - 128px);max-height:calc(100dvh - 128px);overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
   .mobile-nav.open{display:block}
   .mobile-nav a{display:block;padding:.6rem 0;font-size:.9rem;color:var(--text-mid);border-bottom:1px solid rgba(26,39,68,.05);text-decoration:none}
   .mobile-nav a:hover{color:var(--navy)}
@@ -301,6 +301,7 @@
 
   /* Footer */
   footer{background:var(--navy-deep);padding:4rem 5% 2rem;color:rgba(255,255,255,.6)}
+  .footer-inner{max-width:var(--max,1400px);margin:0 auto}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
   .footer-logo img{height:96px;width:auto;margin-bottom:1rem;display:block}
   .footer-brand p{font-size:.85rem;line-height:1.7;font-weight:300;max-width:280px}
@@ -373,6 +374,19 @@
       bottom:10px!important;right:10px!important;
       width:100px!important;height:100px!important;
     }
+  }
+
+
+  /* MOBILE_NAV_SCROLL_FIX */
+  @media(max-width:900px){
+    nav{height:96px}
+    .nav-logo img{height:70px!important}
+    .mobile-nav{top:96px;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px)}
+  }
+  @media(max-width:600px){
+    nav{height:80px}
+    .nav-logo img{height:58px!important}
+    .mobile-nav{top:80px;max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px)}
   }
 
 </style>
@@ -753,6 +767,7 @@
 
 <!-- FOOTER -->
 <footer>
+  <div class="footer-inner">
   <div class="footer-grid">
     <div class="footer-brand">
       <div class="footer-logo"><img src="logo.png" alt="SK Financial Group"></div>
@@ -789,6 +804,7 @@
   <div class="footer-bottom">
     <p>© 2026 SK Financial Group. All rights reserved. · 3024a Great North Road, New Lynn, Auckland 0600</p>
     <p>FSP Registered · FMA Regulated · FSCL Member</p>
+  </div>
   </div>
 </footer>
 
@@ -827,7 +843,10 @@
 
   // Mobile nav
   function toggleMobile() {
-    document.getElementById('mobileNav').classList.toggle('open');
+    var nav = document.getElementById('mobileNav');
+    var isOpen = nav.classList.toggle('open');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+    if (isOpen) { nav.scrollTop = 0; }
   }
 
   
@@ -918,6 +937,15 @@
         console.error('Form submission failed:', err);
         alert('Sorry, something went wrong sending your enquiry. Please call us on 09-553 6223 or try again.');
       });
+    });
+  });
+
+  // Close mobile menu and restore scroll when a nav link is tapped
+  document.querySelectorAll('.mobile-nav a').forEach(function(link){
+    link.addEventListener('click', function(){
+      var nav = document.getElementById('mobileNav');
+      if (nav) { nav.classList.remove('open'); }
+      document.body.style.overflow = '';
     });
   });
 </script>
