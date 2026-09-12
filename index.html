@@ -300,8 +300,8 @@
   .contact-item:hover{opacity:.8}
 
   /* Footer */
-  footer{background:var(--navy-deep);padding:4rem 5% 2rem;color:rgba(255,255,255,.6)}
-  .footer-inner{max-width:var(--max,1400px);margin:0 auto}
+  footer{background:var(--navy-deep);padding:4rem 0 2rem;color:rgba(255,255,255,.6)}
+  .footer-inner{max-width:var(--max, 1400px);margin:0 auto;padding:0 5%}
   .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
   .footer-logo img{height:96px;width:auto;margin-bottom:1rem;display:block}
   .footer-brand p{font-size:.85rem;line-height:1.7;font-weight:300;max-width:280px}
@@ -379,14 +379,7 @@
 
   /* MOBILE_NAV_SCROLL_FIX */
   @media(max-width:900px){
-    nav{height:96px}
-    .nav-logo img{height:70px!important}
-    .mobile-nav{top:96px;max-height:calc(100vh - 96px);max-height:calc(100dvh - 96px)}
-  }
-  @media(max-width:600px){
-    nav{height:80px}
-    .nav-logo img{height:58px!important}
-    .mobile-nav{top:80px;max-height:calc(100vh - 80px);max-height:calc(100dvh - 80px)}
+    .mobile-nav{top:128px;max-height:calc(100vh - 128px);max-height:calc(100dvh - 128px)}
   }
 
 </style>
