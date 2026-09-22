@@ -369,23 +369,10 @@ function toggleMobile(){
   document.body.style.overflow = isOpen ? 'hidden' : '';
   if (isOpen) { nav.scrollTop = 0; }
 }
-function openPopup(){
-  document.getElementById('popup').classList.add('active');
-  document.body.style.overflow='hidden';
-}
-function closePopup(){
-  document.getElementById('popup').classList.remove('active');
-  document.body.style.overflow='';
-}
-document.getElementById('popup').addEventListener('click',function(e){
-  if(e.target===this)closePopup();
-});
 const ro=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}});
 },{threshold:.08});
 document.querySelectorAll('.reveal').forEach(r=>ro.observe(r));
-// Auto popup after 18s
-// setTimeout(openPopup,18000);
 </script>
 
 <script>
